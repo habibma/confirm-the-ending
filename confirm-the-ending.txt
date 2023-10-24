@@ -1,0 +1,22 @@
+function confirmEnding(str, target) {
+  let item ='';
+  const letters= []
+
+  for (let i=str.length-1; i >=0 ; i--){
+    item = str[i] + item
+    letters.push(item);
+    
+    if(letters[i] === target) {
+      return true;
+    } 	
+	// this loop iterates through the string (strings behaves like the arrays) and create an array in each circle
+	// [ 'b' ] in 1st circle
+	// [ 'b', 'ib' ] in 2nd circle
+	// [ 'b', 'ib', 'bib' ] in 3rd circle
+	// [ 'b', 'ib', 'bib', 'abib' ] in 4th circle
+	// [ 'b', 'ib', 'bib', 'abib', 'Habib' ] in last circle;
+  }
+  return false;
+}
+
+confirmEnding("Habib", "n"); // it would return false
